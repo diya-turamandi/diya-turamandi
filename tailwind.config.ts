@@ -68,7 +68,12 @@ export default {
 					700: '#3d4a3d',
 					800: '#343c34',
 					900: '#2d332d',
-				}
+				},
+				'pastel-lavender': 'hsl(var(--pastel-lavender))',
+				'pastel-mint': 'hsl(var(--pastel-mint))',
+				'pastel-pink': 'hsl(var(--pastel-pink))',
+				'pastel-peach': 'hsl(var(--pastel-peach))',
+				'pastel-blue': 'hsl(var(--pastel-blue))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

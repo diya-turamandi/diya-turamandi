@@ -36,6 +36,12 @@
     --ring: 107 114 128;
 
     --radius: 0.5rem;
+
+    --pastel-lavender: 240 230 255;
+    --pastel-mint: 230 255 240;
+    --pastel-pink: 255 230 240;
+    --pastel-peach: 255 240 230;
+    --pastel-blue: 230 240 255;
   }
 }
 
@@ -47,6 +53,7 @@
   body {
     @apply bg-background text-foreground font-inter;
     min-height: 100vh;
+    background: linear-gradient(135deg, #fef7f0 0%, #f0f4ff 50%, #f7f0ff 100%);
   }
 
   html {
@@ -64,26 +71,54 @@
   }
   
   .gradient-text {
-    @apply text-gray-900;
+    @apply bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent;
   }
   
   .btn-minimal {
-    @apply px-8 py-3 rounded-none font-medium transition-all duration-300 transform hover:scale-105 active:scale-95;
+    @apply px-8 py-3 rounded-3xl font-medium transition-all duration-300 transform hover:scale-105 active:scale-95;
   }
   
   .btn-primary {
-    @apply btn-minimal bg-gray-900 text-white hover:bg-gray-800 border-2 border-gray-900;
+    @apply btn-minimal bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl;
   }
   
   .btn-secondary {
-    @apply btn-minimal bg-transparent text-gray-900 border-2 border-gray-900 hover:bg-gray-900 hover:text-white;
+    @apply btn-minimal bg-white text-purple-600 border-2 border-purple-600 hover:bg-purple-600 hover:text-white shadow-lg hover:shadow-xl;
   }
 
   .name-display {
-    @apply text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none;
+    @apply text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .title-display {
-    @apply text-xl md:text-2xl font-light tracking-wide text-gray-600;
+    @apply text-xl md:text-2xl font-light tracking-wide;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .pastel-lavender {
+    background-color: hsl(var(--pastel-lavender));
+  }
+  
+  .pastel-mint {
+    background-color: hsl(var(--pastel-mint));
+  }
+  
+  .pastel-pink {
+    background-color: hsl(var(--pastel-pink));
+  }
+  
+  .pastel-peach {
+    background-color: hsl(var(--pastel-peach));
+  }
+  
+  .pastel-blue {
+    background-color: hsl(var(--pastel-blue));
   }
 }
