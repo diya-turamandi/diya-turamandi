@@ -1,5 +1,5 @@
 
-import { Figma, React as ReactIcon, Bootstrap, Github } from 'lucide-react';
+import { Figma, Atom, Layers, Github } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -18,7 +18,7 @@ const Services = () => {
     {
       title: 'Frontend Development',
       description: 'React-based development for startups and established businesses',
-      icon: ReactIcon,
+      icon: Atom,
       features: ['React Development', 'Component Libraries', 'Performance Optimization', 'Cross-browser Testing']
     },
     {
@@ -30,7 +30,7 @@ const Services = () => {
     {
       title: 'Responsive Design',
       description: 'Mobile-first designs that work perfectly on all devices',
-      icon: Bootstrap,
+      icon: Layers,
       features: ['Mobile-First Approach', 'Cross-Device Testing', 'Touch Interactions', 'Performance Focused']
     },
     {

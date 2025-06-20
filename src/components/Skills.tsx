@@ -1,13 +1,13 @@
 
-import { Html, Css, Javascript, React, Bootstrap, Figma, Github } from 'lucide-react';
+import { Code, Palette, Coffee, Atom, Layers, Figma, Github } from 'lucide-react';
 
 const Skills = () => {
   const skills = [
-    { name: 'HTML', icon: Html, color: 'bg-orange-100 text-orange-600' },
-    { name: 'CSS', icon: Css, color: 'bg-blue-100 text-blue-600' },
-    { name: 'JavaScript', icon: Javascript, color: 'bg-yellow-100 text-yellow-600' },
-    { name: 'React', icon: React, color: 'bg-cyan-100 text-cyan-600' },
-    { name: 'Bootstrap', icon: Bootstrap, color: 'bg-purple-100 text-purple-600' },
+    { name: 'HTML', icon: Code, color: 'bg-orange-100 text-orange-600' },
+    { name: 'CSS', icon: Palette, color: 'bg-blue-100 text-blue-600' },
+    { name: 'JavaScript', icon: Coffee, color: 'bg-yellow-100 text-yellow-600' },
+    { name: 'React', icon: Atom, color: 'bg-cyan-100 text-cyan-600' },
+    { name: 'Bootstrap', icon: Layers, color: 'bg-purple-100 text-purple-600' },
     { name: 'Figma', icon: Figma, color: 'bg-pink-100 text-pink-600' },
     { name: 'GitHub', icon: Github, color: 'bg-gray-100 text-gray-600' },
     { name: 'C Programming', icon: null, color: 'bg-green-100 text-green-600' },
