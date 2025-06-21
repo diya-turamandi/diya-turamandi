@@ -22,7 +22,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-48 h-60 lg:w-56 lg:h-72 rounded-3xl overflow-hidden shadow-2xl animate-float">
                 <img 
-                  src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=600&h=800&fit=crop&crop=face" 
+                  src="https://i.postimg.cc/JzFLqV6s/diyaturamandi.jpg" 
                   alt="Diya Turamandi"
                   className="w-full h-full object-cover"
                 />
