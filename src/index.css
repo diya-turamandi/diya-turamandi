@@ -7,41 +7,41 @@
 
 @layer base {
   :root {
-    --background: 250 250 248;
-    --foreground: 32 32 32;
+    --background: 248 250 252;
+    --foreground: 15 23 42;
 
     --card: 255 255 255;
-    --card-foreground: 32 32 32;
+    --card-foreground: 15 23 42;
 
     --popover: 255 255 255;
-    --popover-foreground: 32 32 32;
+    --popover-foreground: 15 23 42;
 
-    --primary: 107 114 128;
+    --primary: 99 102 241;
     --primary-foreground: 255 255 255;
 
-    --secondary: 244 244 242;
-    --secondary-foreground: 32 32 32;
+    --secondary: 241 245 249;
+    --secondary-foreground: 51 65 85;
 
     --muted: 248 250 252;
-    --muted-foreground: 107 114 128;
+    --muted-foreground: 100 116 139;
 
-    --accent: 229 231 235;
-    --accent-foreground: 32 32 32;
+    --accent: 236 254 255;
+    --accent-foreground: 15 23 42;
 
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
 
-    --border: 229 231 235;
-    --input: 229 231 235;
-    --ring: 107 114 128;
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --ring: 99 102 241;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --pastel-lavender: 240 230 255;
-    --pastel-mint: 230 255 240;
-    --pastel-pink: 255 230 240;
-    --pastel-peach: 255 240 230;
-    --pastel-blue: 230 240 255;
+    --pastel-lavender: 233 235 255;
+    --pastel-mint: 220 252 231;
+    --pastel-pink: 252 231 243;
+    --pastel-peach: 254 243 199;
+    --pastel-blue: 219 234 254;
   }
 }
 
@@ -53,7 +53,7 @@
   body {
     @apply bg-background text-foreground font-inter;
     min-height: 100vh;
-    background: linear-gradient(135deg, #fef7f0 0%, #f0f4ff 50%, #f7f0ff 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 25%, #fdf4ff 50%, #f0f9ff 75%, #f8fafc 100%);
   }
 
   html {
@@ -63,62 +63,63 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/90 backdrop-blur-sm border border-gray-200/50 shadow-sm;
+    @apply bg-white/95 backdrop-blur-xl border border-white/20 shadow-xl shadow-indigo-500/10;
   }
   
   .hover-lift {
-    @apply transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-md;
+    @apply transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20;
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent;
   }
   
   .btn-minimal {
-    @apply px-8 py-3 rounded-3xl font-medium transition-all duration-300 transform hover:scale-105 active:scale-95;
+    @apply px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95;
   }
   
   .btn-primary {
-    @apply btn-minimal bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl;
+    @apply btn-minimal bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 shadow-xl hover:shadow-2xl shadow-indigo-500/25;
   }
   
   .btn-secondary {
-    @apply btn-minimal bg-white text-purple-600 border-2 border-purple-600 hover:bg-purple-600 hover:text-white shadow-lg hover:shadow-xl;
+    @apply btn-minimal bg-white/90 text-indigo-700 border-2 border-indigo-200 hover:bg-gradient-to-r hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 hover:text-white hover:border-transparent shadow-lg hover:shadow-xl backdrop-blur-sm;
   }
 
   .name-display {
     @apply text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 35%, #ec4899 70%, #f97316 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 4px 6px rgba(79, 70, 229, 0.1));
   }
 
   .title-display {
-    @apply text-xl md:text-2xl font-light tracking-wide;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    @apply text-xl md:text-2xl font-medium tracking-wide;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .pastel-lavender {
-    background-color: hsl(var(--pastel-lavender));
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
   }
   
   .pastel-mint {
-    background-color: hsl(var(--pastel-mint));
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
   }
   
   .pastel-pink {
-    background-color: hsl(var(--pastel-pink));
+    background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
   }
   
   .pastel-peach {
-    background-color: hsl(var(--pastel-peach));
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
   }
   
   .pastel-blue {
-    background-color: hsl(var(--pastel-blue));
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
   }
 }
