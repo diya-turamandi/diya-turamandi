@@ -85,13 +85,6 @@ const Services = () => {
                     </div>
                   ))}
                 </div>
-                
-                <div className="mt-6 pt-6 border-t border-slate-200">
-                  <button className="text-purple-600 font-medium hover:text-purple-700 transition-colors duration-300 group-hover:gap-2 flex items-center gap-1">
-                    Learn More 
-                    <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-                  </button>
-                </div>
               </div>
             ))}
           </div>
