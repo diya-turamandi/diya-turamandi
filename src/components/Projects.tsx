@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { ArrowRight, Github } from 'lucide-react';
 
@@ -10,7 +11,7 @@ const Projects = () => {
       title: 'Poodup',
       description: 'A lively web app with playful animations',
       fullDescription: 'Poodup is a vibrant web application that showcases modern UI/UX principles with engaging animations and interactive elements. Built with React and styled with custom CSS animations to create a delightful user experience.',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
+      image: 'https://i.postimg.cc/4yjhymGb/Screenshot-2025-06-21-231749.png',
       tools: ['React', 'CSS3', 'JavaScript', 'Figma'],
       challenges: 'Creating smooth animations while maintaining performance',
       learnings: 'Frontend Development, Figma',
@@ -22,7 +23,7 @@ const Projects = () => {
       title: 'Heal Minds',
       description: 'Mental wellness platform with AI chatbot integration',
       fullDescription: 'A comprehensive mental wellness platform featuring an AI-powered chatbot built with Dialogflow. The platform provides resources, mood tracking, and personalized recommendations for mental health support.',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop',
+      image: 'https://i.postimg.cc/0jK0Vg2n/Screenshot-2025-06-21-231919.png',
       tools: ['React', 'Dialogflow', 'Bootstrap', 'API Integration'],
       challenges: 'Integrating Dialogflow API and creating empathetic user interactions',
       learnings: 'AI chatbot development and user experience for sensitive topics',
@@ -34,7 +35,7 @@ const Projects = () => {
       title: 'Geeky Nerdy Pyaar',
       description: 'A love compatibility app with beautiful, playful design',
       fullDescription: 'A playful love compatibility application that combines fun animations with engaging design elements. Users can input their information and receive compatibility scores through an entertaining and visually appealing interface.',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop',
+      image: 'https://i.postimg.cc/MT3vvvw3/Screenshot-2025-06-21-232246.png',
       tools: ['HTML', 'CSS', 'JavaScript', 'Animations'],
       challenges: 'Creating engaging animations that enhance rather than distract from functionality',
       learnings: 'Animation timing, user engagement strategies, and responsive design',
@@ -46,7 +47,7 @@ const Projects = () => {
       title: 'Dora Fly',
       description: 'A fun browser game where players choose a character and dodge obstacles',
       fullDescription: 'Dora Fly is an engaging browser-based game built with vanilla JavaScript. Players control a character that flies through obstacles, featuring smooth gameplay mechanics and progressive difficulty levels.',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop',
+      image: 'https://i.postimg.cc/y6Ms8F93/Screenshot-2025-06-21-232049.png',
       tools: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Game Logic'],
       challenges: 'Implementing smooth game physics and collision detection',
       learnings: 'Game development fundamentals and canvas manipulation',
