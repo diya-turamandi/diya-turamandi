@@ -1,5 +1,5 @@
 
-import { Code, Palette, Coffee, Atom, Layers, Figma, Github } from 'lucide-react';
+import { Code, Palette, Coffee, Atom, Layers, Figma, Github, Database, Wind } from 'lucide-react';
 
 const Skills = () => {
   const skills = [
@@ -8,9 +8,12 @@ const Skills = () => {
     { name: 'JavaScript', icon: Coffee, color: 'bg-yellow-100 text-yellow-600' },
     { name: 'React', icon: Atom, color: 'bg-cyan-100 text-cyan-600' },
     { name: 'Bootstrap', icon: Layers, color: 'bg-purple-100 text-purple-600' },
+    { name: 'Tailwind CSS', icon: Wind, color: 'bg-teal-100 text-teal-600' },
     { name: 'Figma', icon: Figma, color: 'bg-pink-100 text-pink-600' },
     { name: 'GitHub', icon: Github, color: 'bg-gray-100 text-gray-600' },
-    { name: 'C Programming', icon: null, color: 'bg-green-100 text-green-600' },
+    { name: 'MySQL', icon: Database, color: 'bg-blue-100 text-blue-600' },
+    { name: 'Python', icon: null, color: 'bg-green-100 text-green-600' },
+    { name: 'C Programming', icon: null, color: 'bg-red-100 text-red-600' },
     { name: 'UI/UX Design', icon: null, color: 'bg-indigo-100 text-indigo-600' },
   ];
 
@@ -37,7 +40,8 @@ const Skills = () => {
                     <skill.icon className="w-8 h-8" />
                   ) : (
                     <div className="text-2xl font-bold">
-                      {skill.name === 'C Programming' ? 'C' : 'UI'}
+                      {skill.name === 'C Programming' ? 'C' : 
+                       skill.name === 'Python' ? 'Py' : 'UI'}
                     </div>
                   )}
                 </div>
