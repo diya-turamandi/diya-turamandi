@@ -39,7 +39,7 @@ const Projects = () => {
       tools: ['HTML', 'CSS', 'JavaScript', 'Animations'],
       challenges: 'Creating engaging animations that enhance rather than distract from functionality',
       learnings: 'Animation timing, user engagement strategies, and responsive design',
-      github: '#',
+      github: 'https://github.com/diya-turamandi/Compatible',
       live: 'https://geekynerdypyaar.onrender.com'
     },
     {
@@ -52,6 +52,19 @@ const Projects = () => {
       challenges: 'Implementing smooth game physics and collision detection',
       learnings: 'Game development fundamentals and canvas manipulation',
       github: 'https://github.com/diya-turamandi/dora-fly',
+      live: '#'
+    },
+    {
+      id: 5,
+      title: 'ATM Pharma',
+      description: 'ATM Pharma Web Page',
+      fullDescription: 'A clean, user-friendly website designed for ATM Pharma — a trusted pharmacy established in 2005. The site showcases their services, has a Google Maps API integration, promotes online accessibility, and delivers an easy browsing experience for customers seeking quality healthcare products.',
+      image: 'https://i.postimg.cc/fbdJnPgT/Screenshot-2025-06-22-121344.png',
+      secondaryImage: 'https://i.postimg.cc/yNRXQvm0/Screenshot-2025-06-22-121316.png',
+      tools: ['HTML', 'CSS', 'JavaScript', 'Google Maps API'],
+      challenges: 'Integrating Google Maps API and creating a professional healthcare website',
+      learnings: 'API integration, healthcare industry web standards, and user-friendly design',
+      github: 'https://github.com/diya-turamandi/ATM',
       live: '#'
     }
   ];
@@ -146,11 +159,26 @@ const Projects = () => {
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="glass-card rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="relative">
-              <img 
-                src={selectedProject.image} 
-                alt={selectedProject.title}
-                className="w-full h-64 object-cover rounded-t-3xl"
-              />
+              {selectedProject.secondaryImage ? (
+                <div className="grid grid-cols-2 gap-2">
+                  <img 
+                    src={selectedProject.image} 
+                    alt={selectedProject.title}
+                    className="w-full h-32 object-cover rounded-tl-3xl"
+                  />
+                  <img 
+                    src={selectedProject.secondaryImage} 
+                    alt={`${selectedProject.title} secondary`}
+                    className="w-full h-32 object-cover rounded-tr-3xl"
+                  />
+                </div>
+              ) : (
+                <img 
+                  src={selectedProject.image} 
+                  alt={selectedProject.title}
+                  className="w-full h-64 object-cover rounded-t-3xl"
+                />
+              )}
               <button 
                 onClick={() => setSelectedProject(null)}
                 className="absolute top-4 right-4 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-slate-600 hover:bg-white transition-colors duration-300"

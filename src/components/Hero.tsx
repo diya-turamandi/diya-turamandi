@@ -20,7 +20,7 @@ const Hero = () => {
             </div>
             
             <div className="relative">
-              <div className="w-48 h-60 lg:w-56 lg:h-72 rounded-3xl overflow-hidden shadow-2xl animate-float">
+              <div className="w-48 h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden shadow-2xl animate-float">
                 <img 
                   src="https://i.postimg.cc/JzFLqV6s/diyaturamandi.jpg" 
                   alt="Diya Turamandi"

@@ -14,6 +14,7 @@ const Skills = () => {
     { name: 'MySQL', icon: Database, color: 'bg-blue-100 text-blue-600' },
     { name: 'Python', icon: null, color: 'bg-green-100 text-green-600' },
     { name: 'C Programming', icon: null, color: 'bg-red-100 text-red-600' },
+    { name: 'Canva', icon: null, color: 'bg-purple-100 text-purple-600' },
     { name: 'UI/UX Design', icon: null, color: 'bg-indigo-100 text-indigo-600' },
   ];
 
@@ -41,7 +42,8 @@ const Skills = () => {
                   ) : (
                     <div className="text-2xl font-bold">
                       {skill.name === 'C Programming' ? 'C' : 
-                       skill.name === 'Python' ? 'Py' : 'UI'}
+                       skill.name === 'Python' ? 'Py' : 
+                       skill.name === 'Canva' ? 'Ca' : 'UI'}
                     </div>
                   )}
                 </div>
@@ -67,8 +69,11 @@ const Skills = () => {
                 <span className="px-4 py-2 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-full text-sm font-medium">
                   Node.js
                 </span>
-                <span className="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full text-sm font-medium">
-                  Three.js
+                <span className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full text-sm font-medium">
+                  WordPress
+                </span>
+                <span className="px-4 py-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full text-sm font-medium">
+                  PHP
                 </span>
               </div>
             </div>

@@ -1,4 +1,6 @@
 
+import { Linkedin } from 'lucide-react';
+
 const Footer = () => {
   return (
     <footer className="bg-slate-900 text-white py-12">
@@ -51,7 +53,8 @@ const Footer = () => {
               <a href="https://github.com/diya-turamandi" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors duration-300">
                 GitHub
               </a>
-              <a href="https://linkedin.com/in/diya-turamandi-007875263" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors duration-300">
+              <a href="https://linkedin.com/in/diya-turamandi-007875263" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors duration-300 flex items-center gap-1">
+                <Linkedin className="w-4 h-4" />
                 LinkedIn
               </a>
             </div>
