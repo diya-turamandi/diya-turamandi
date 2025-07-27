@@ -58,13 +58,13 @@ const Projects = () => {
       id: 5,
       title: 'ATM Pharma',
       description: 'ATM Pharma Web Page',
-      fullDescription: 'A clean, user-friendly website designed for ATM Pharma — a trusted pharmacy established in 2005. The site showcases their services, has a Google Maps API integration, promotes online accessibility, and delivers an easy browsing experience for customers seeking quality healthcare products.',
+      fullDescription: 'A clean, user-friendly website designed for ATM Pharma — a trusted pharmacy established in 2005. The site showcases their services, has a Google Maps API integration, promotes online accessibility, and delivers an easy browsing experience for customers seeking quality healthcare products. I have made the website using React app.',
       image: 'https://i.postimg.cc/fbdJnPgT/Screenshot-2025-06-22-121344.png',
       secondaryImage: 'https://i.postimg.cc/yNRXQvm0/Screenshot-2025-06-22-121316.png',
-      tools: ['HTML', 'CSS', 'JavaScript', 'Google Maps API'],
+      tools: ['React', 'HTML', 'CSS', 'JavaScript', 'Google Maps API'],
       challenges: 'Integrating Google Maps API and creating a professional healthcare website',
       learnings: 'API integration, healthcare industry web standards, and user-friendly design',
-      github: 'https://github.com/diya-turamandi/ATM',
+      github: 'https://github.com/diya-turamandi/AtmPharmaProject/tree/main/AtmPharma',
       live: '#'
     }
   ];
