@@ -127,34 +127,70 @@ export default {
 				'fade-in': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(20px)'
+						transform: 'translateY(30px) scale(0.95)'
 					},
 					'100%': {
 						opacity: '1',
-						transform: 'translateY(0)'
+						transform: 'translateY(0) scale(1)'
 					}
 				},
 				'float': {
-					'0%, 100%': { transform: 'translateY(0px)' },
-					'50%': { transform: 'translateY(-10px)' }
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+					'50%': { transform: 'translateY(-15px) rotate(2deg)' }
 				},
 				'gradient-x': {
 					'0%, 100%': {
-						'background-size': '200% 200%',
+						'background-size': '300% 300%',
 						'background-position': 'left center'
 					},
 					'50%': {
-						'background-size': '200% 200%',
+						'background-size': '300% 300%',
 						'background-position': 'right center'
+					}
+				},
+				'gradient-shift': {
+					'0%, 100%': {
+						'background-position': '0% 50%'
+					},
+					'50%': {
+						'background-position': '100% 50%'
+					}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						'filter': 'drop-shadow(0 0 5px rgba(0, 255, 255, 0.5))'
+					},
+					'50%': {
+						'filter': 'drop-shadow(0 0 20px rgba(0, 255, 255, 0.9)) drop-shadow(0 0 30px rgba(138, 43, 226, 0.5))'
+					}
+				},
+				'slide-in-tech': {
+					'0%': {
+						transform: 'translateX(-100px) opacity(0)'
+					},
+					'100%': {
+						transform: 'translateX(0) opacity(1)'
+					}
+				},
+				'matrix-rain': {
+					'0%': {
+						transform: 'translateY(-100%)'
+					},
+					'100%': {
+						transform: 'translateY(100vh)'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.8s ease-out',
-				'float': 'float 3s ease-in-out infinite',
+				'fade-in': 'fade-in 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
+				'float': 'float 6s ease-in-out infinite',
 				'gradient-x': 'gradient-x 15s ease infinite',
+				'gradient-shift': 'gradient-shift 4s ease infinite',
+				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+				'slide-in-tech': 'slide-in-tech 1s cubic-bezier(0.4, 0, 0.2, 1)',
+				'matrix-rain': 'matrix-rain 20s linear infinite',
 			}
 		}
 	},

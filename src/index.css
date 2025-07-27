@@ -7,41 +7,54 @@
 
 @layer base {
   :root {
-    --background: 248 250 252;
-    --foreground: 15 23 42;
+    /* Techno Luxe Dark Theme */
+    --background: 6 6 14;
+    --foreground: 240 248 255;
 
-    --card: 255 255 255;
-    --card-foreground: 15 23 42;
+    --card: 15 15 25;
+    --card-foreground: 240 248 255;
 
-    --popover: 255 255 255;
-    --popover-foreground: 15 23 42;
+    --popover: 20 20 30;
+    --popover-foreground: 240 248 255;
 
-    --primary: 99 102 241;
-    --primary-foreground: 255 255 255;
+    --primary: 0 255 255;
+    --primary-foreground: 6 6 14;
 
-    --secondary: 241 245 249;
-    --secondary-foreground: 51 65 85;
+    --secondary: 30 30 45;
+    --secondary-foreground: 200 200 220;
 
-    --muted: 248 250 252;
-    --muted-foreground: 100 116 139;
+    --muted: 25 25 35;
+    --muted-foreground: 160 160 180;
 
-    --accent: 236 254 255;
-    --accent-foreground: 15 23 42;
+    --accent: 138 43 226;
+    --accent-foreground: 240 248 255;
 
-    --destructive: 239 68 68;
-    --destructive-foreground: 248 250 252;
+    --destructive: 255 50 100;
+    --destructive-foreground: 240 248 255;
 
-    --border: 226 232 240;
-    --input: 226 232 240;
-    --ring: 99 102 241;
+    --border: 40 40 55;
+    --input: 25 25 35;
+    --ring: 0 255 255;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    --pastel-lavender: 233 235 255;
-    --pastel-mint: 220 252 231;
-    --pastel-pink: 252 231 243;
-    --pastel-peach: 254 243 199;
-    --pastel-blue: 219 234 254;
+    /* Techno Luxe Gradients */
+    --neon-cyan: 0 255 255;
+    --neon-purple: 138 43 226;
+    --neon-pink: 255 20 147;
+    --electric-blue: 30 144 255;
+    --gold: 255 215 0;
+    
+    /* Advanced Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-cyan)) 0%, hsl(var(--electric-blue)) 50%, hsl(var(--neon-purple)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--neon-purple)) 0%, hsl(var(--neon-pink)) 100%);
+    --gradient-metallic: linear-gradient(135deg, #434343 0%, #000000 50%, #434343 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    
+    /* Shadows & Glows */
+    --shadow-neon: 0 0 20px hsl(var(--neon-cyan) / 0.5);
+    --shadow-purple: 0 0 30px hsl(var(--neon-purple) / 0.4);
+    --shadow-glass: 0 10px 40px rgba(0,0,0,0.3);
   }
 }
 
@@ -53,7 +66,8 @@
   body {
     @apply bg-background text-foreground font-inter;
     min-height: 100vh;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 25%, #fdf4ff 50%, #f0f9ff 75%, #f8fafc 100%);
+    background: linear-gradient(135deg, #060614 0%, #0f0f19 25%, #1a1a2e 50%, #16213e 75%, #0f0f19 100%);
+    background-attachment: fixed;
   }
 
   html {
@@ -62,64 +76,148 @@
 }
 
 @layer components {
+  /* Techno Luxe Glass Cards */
   .glass-card {
-    @apply bg-white/95 backdrop-blur-xl border border-white/20 shadow-xl shadow-indigo-500/10;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: var(--shadow-glass), inset 0 1px 0 rgba(255,255,255,0.1);
   }
   
   .hover-lift {
-    @apply transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20;
+    @apply transition-all duration-500 hover:transform hover:-translate-y-4 hover:scale-105;
+    filter: brightness(1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    filter: brightness(1.2);
+    box-shadow: var(--shadow-neon), var(--shadow-glass);
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3));
   }
   
   .btn-minimal {
-    @apply px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95;
+    @apply px-8 py-4 rounded-2xl font-semibold transition-all duration-500 transform hover:scale-110 active:scale-95;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .btn-primary {
-    @apply btn-minimal bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 shadow-xl hover:shadow-2xl shadow-indigo-500/25;
+    background: var(--gradient-primary);
+    color: hsl(var(--primary-foreground));
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    box-shadow: var(--shadow-neon);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+  
+  .btn-primary:hover {
+    box-shadow: var(--shadow-neon), 0 0 40px rgba(0, 255, 255, 0.6);
+    transform: scale(1.1) translateY(-2px);
   }
   
   .btn-secondary {
-    @apply btn-minimal bg-white/90 text-indigo-700 border-2 border-indigo-200 hover:bg-gradient-to-r hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 hover:text-white hover:border-transparent shadow-lg hover:shadow-xl backdrop-blur-sm;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    border: 1px solid rgba(138, 43, 226, 0.5);
+    color: hsl(var(--foreground));
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-purple);
+  }
+  
+  .btn-secondary:hover {
+    background: var(--gradient-secondary);
+    border-color: rgba(255, 20, 147, 0.8);
+    box-shadow: var(--shadow-purple), 0 0 30px rgba(138, 43, 226, 0.5);
+    transform: scale(1.1) translateY(-2px);
   }
 
+  /* Massive Techno Headlines */
   .name-display {
-    @apply text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none;
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 35%, #ec4899 70%, #f97316 100%);
+    @apply text-7xl md:text-9xl lg:text-[12rem] font-black tracking-tighter leading-none;
+    background: linear-gradient(135deg, #00FFFF 0%, #1E90FF 25%, #8A2BE2 50%, #FF1493 75%, #FFD700 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: drop-shadow(0 4px 6px rgba(79, 70, 229, 0.1));
+    background-size: 300% 300%;
+    animation: gradient-shift 4s ease infinite;
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.5)) drop-shadow(0 0 40px rgba(138, 43, 226, 0.3));
+    text-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
   }
 
   .title-display {
-    @apply text-xl md:text-2xl font-medium tracking-wide;
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+    @apply text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide;
+    background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.4));
   }
 
-  .pastel-lavender {
-    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  /* Layered UI Elements */
+  .tech-layer {
+    position: relative;
+    z-index: 1;
   }
   
-  .pastel-mint {
-    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  .tech-layer::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: var(--gradient-primary);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
   
-  .pastel-pink {
-    background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+  .tech-layer:hover::before {
+    opacity: 1;
+  }
+
+  /* Neon Accents */
+  .neon-border {
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3), inset 0 0 10px rgba(0, 255, 255, 0.1);
   }
   
-  .pastel-peach {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  .neon-glow {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.7));
+  }
+
+  /* Modern Animations */
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
   }
   
-  .pastel-blue {
-    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  .pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  
+  .slide-in-tech {
+    animation: slide-in-tech 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 }
