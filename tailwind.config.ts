@@ -127,72 +127,34 @@ export default {
 				'fade-in': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(30px) scale(0.95)'
+						transform: 'translateY(20px)'
 					},
 					'100%': {
 						opacity: '1',
-						transform: 'translateY(0) scale(1)'
+						transform: 'translateY(0)'
 					}
 				},
 				'float': {
-					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
-					'50%': { transform: 'translateY(-15px) rotate(2deg)' }
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
 				},
 				'gradient-x': {
 					'0%, 100%': {
-						'background-size': '300% 300%',
+						'background-size': '200% 200%',
 						'background-position': 'left center'
 					},
 					'50%': {
-						'background-size': '300% 300%',
+						'background-size': '200% 200%',
 						'background-position': 'right center'
-					}
-				},
-				'gradient-shift': {
-					'0%, 100%': {
-						'background-position': '0% 50%'
-					},
-					'50%': {
-						'background-position': '100% 50%'
-					}
-				},
-				'pulse-neon': {
-					'0%, 100%': {
-						'filter': 'drop-shadow(0 0 8px hsl(var(--neon-blue) / 0.6))'
-					},
-					'50%': {
-						'filter': 'drop-shadow(0 0 20px hsl(var(--neon-pink) / 0.8)) drop-shadow(0 0 30px hsl(var(--neon-purple) / 0.6))'
-					}
-				},
-				'slide-glass': {
-					'0%': {
-						transform: 'translateY(20px)',
-						opacity: '0'
-					},
-					'100%': {
-						transform: 'translateY(0)',
-						opacity: '1'
-					}
-				},
-				'glass-shimmer': {
-					'0%': {
-						'background-position': '-200% 0'
-					},
-					'100%': {
-						'background-position': '200% 0'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
-				'float': 'float 4s ease-in-out infinite',
+				'fade-in': 'fade-in 0.8s ease-out',
+				'float': 'float 3s ease-in-out infinite',
 				'gradient-x': 'gradient-x 15s ease infinite',
-				'gradient-shift': 'gradient-shift 6s ease infinite',
-				'pulse-neon': 'pulse-neon 2s ease-in-out infinite',
-				'slide-glass': 'slide-glass 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
-				'glass-shimmer': 'glass-shimmer 2s linear infinite',
 			}
 		}
 	},

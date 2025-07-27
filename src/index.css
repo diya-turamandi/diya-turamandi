@@ -7,7 +7,6 @@
 
 @layer base {
   :root {
-    /* Glassmorphism Light Theme */
     --background: 248 250 252;
     --foreground: 15 23 42;
 
@@ -17,7 +16,7 @@
     --popover: 255 255 255;
     --popover-foreground: 15 23 42;
 
-    --primary: 59 130 246;
+    --primary: 99 102 241;
     --primary-foreground: 255 255 255;
 
     --secondary: 241 245 249;
@@ -26,40 +25,23 @@
     --muted: 248 250 252;
     --muted-foreground: 100 116 139;
 
-    --accent: 236 72 153;
-    --accent-foreground: 255 255 255;
+    --accent: 236 254 255;
+    --accent-foreground: 15 23 42;
 
     --destructive: 239 68 68;
-    --destructive-foreground: 255 255 255;
+    --destructive-foreground: 248 250 252;
 
     --border: 226 232 240;
-    --input: 255 255 255;
-    --ring: 59 130 246;
+    --input: 226 232 240;
+    --ring: 99 102 241;
 
-    --radius: 1.5rem;
+    --radius: 0.75rem;
 
-    /* Glassmorphism Neon Accents */
-    --neon-blue: 59 130 246;
-    --neon-pink: 236 72 153;
-    --neon-purple: 147 51 234;
-    --neon-cyan: 6 182 212;
-    --neon-green: 34 197 94;
-    
-    /* Glass Effects */
-    --glass-white: rgba(255, 255, 255, 0.25);
-    --glass-white-light: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.18);
-    
-    /* Gradients */
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.1) 100%);
-    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-blue)) 0%, hsl(var(--neon-pink)) 50%, hsl(var(--neon-purple)) 100%);
-    --gradient-subtle: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(236,72,153,0.1) 100%);
-    
-    /* Shadows & Effects */
-    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    --shadow-neon: 0 0 20px hsl(var(--neon-blue) / 0.5);
-    --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    --blur-glass: blur(20px);
+    --pastel-lavender: 233 235 255;
+    --pastel-mint: 220 252 231;
+    --pastel-pink: 252 231 243;
+    --pastel-peach: 254 243 199;
+    --pastel-blue: 219 234 254;
   }
 }
 
@@ -71,8 +53,7 @@
   body {
     @apply bg-background text-foreground font-inter;
     min-height: 100vh;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 25%, #cbd5e1 50%, #94a3b8 75%, #f1f5f9 100%);
-    background-attachment: fixed;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 25%, #fdf4ff 50%, #f0f9ff 75%, #f8fafc 100%);
   }
 
   html {
@@ -81,163 +62,64 @@
 }
 
 @layer components {
-  /* Glassmorphism Glass Cards */
   .glass-card {
-    background: var(--glass-white);
-    backdrop-filter: var(--blur-glass);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--shadow-glass);
-    border-radius: var(--radius);
+    @apply bg-white/95 backdrop-blur-xl border border-white/20 shadow-xl shadow-indigo-500/10;
   }
   
-  .glass-panel {
-    background: var(--gradient-glass);
-    backdrop-filter: var(--blur-glass);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--shadow-float);
-    border-radius: var(--radius);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .glass-panel::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--gradient-subtle);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-  }
-  
-  .glass-panel:hover::before {
-    opacity: 1;
-  }
-  
-  .hover-float {
-    @apply transition-all duration-300 hover:transform hover:-translate-y-2;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .hover-float:hover {
-    box-shadow: var(--shadow-float), var(--shadow-neon);
+  .hover-lift {
+    @apply transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20;
   }
   
   .gradient-text {
-    background: var(--gradient-neon);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    filter: drop-shadow(0 0 10px hsl(var(--neon-blue) / 0.3));
+    @apply bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent;
   }
   
-  .btn-glass {
-    @apply px-6 py-3 rounded-2xl font-medium transition-all duration-300 transform hover:scale-105;
-    background: var(--glass-white);
-    backdrop-filter: var(--blur-glass);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--shadow-glass);
-    position: relative;
-    overflow: hidden;
+  .btn-minimal {
+    @apply px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95;
   }
   
-  .btn-glass::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: left 0.4s;
+  .btn-primary {
+    @apply btn-minimal bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 shadow-xl hover:shadow-2xl shadow-indigo-500/25;
   }
   
-  .btn-glass:hover::before {
-    left: 100%;
-  }
-  
-  .btn-neon {
-    background: var(--gradient-neon);
-    color: white;
-    border: 1px solid hsl(var(--neon-blue) / 0.5);
-    box-shadow: var(--shadow-neon);
-    @apply px-6 py-3 rounded-2xl font-medium transition-all duration-300 transform hover:scale-105;
-  }
-  
-  .btn-neon:hover {
-    box-shadow: var(--shadow-neon), 0 0 30px hsl(var(--neon-blue) / 0.6);
-    transform: scale(1.05) translateY(-1px);
+  .btn-secondary {
+    @apply btn-minimal bg-white/90 text-indigo-700 border-2 border-indigo-200 hover:bg-gradient-to-r hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 hover:text-white hover:border-transparent shadow-lg hover:shadow-xl backdrop-blur-sm;
   }
 
-  /* Glassmorphism Headlines */
   .name-display {
-    @apply text-6xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none;
-    background: var(--gradient-neon);
+    @apply text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 35%, #ec4899 70%, #f97316 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    background-size: 200% 200%;
-    animation: gradient-shift 6s ease infinite;
-    filter: drop-shadow(0 0 20px hsl(var(--neon-blue) / 0.4));
+    filter: drop-shadow(0 4px 6px rgba(79, 70, 229, 0.1));
   }
 
   .title-display {
-    @apply text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide;
-    background: var(--gradient-neon);
+    @apply text-xl md:text-2xl font-medium tracking-wide;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: drop-shadow(0 0 8px hsl(var(--neon-pink) / 0.3));
   }
 
-  /* Floating Effects */
-  .floating-panel {
-    position: relative;
-    z-index: 1;
-    transform: translateZ(0);
+  .pastel-lavender {
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
   }
   
-  .floating-panel::before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    background: var(--gradient-neon);
-    border-radius: inherit;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  .pastel-mint {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
   }
   
-  .floating-panel:hover::before {
-    opacity: 0.1;
-  }
-
-  /* Neon Accents */
-  .neon-border {
-    border: 1px solid hsl(var(--neon-blue) / 0.5);
-    box-shadow: 0 0 15px hsl(var(--neon-blue) / 0.3), inset 0 0 15px hsl(var(--neon-blue) / 0.1);
+  .pastel-pink {
+    background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
   }
   
-  .neon-glow {
-    filter: drop-shadow(0 0 15px hsl(var(--neon-pink) / 0.6));
-  }
-
-  /* Smooth Animations */
-  .floating-animation {
-    animation: float 4s ease-in-out infinite;
+  .pastel-peach {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
   }
   
-  .pulse-neon {
-    animation: pulse-neon 2s ease-in-out infinite;
-  }
-  
-  .slide-glass {
-    animation: slide-glass 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  .pastel-blue {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
   }
 }
