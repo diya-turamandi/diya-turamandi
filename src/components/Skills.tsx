@@ -9,6 +9,10 @@ const Skills = () => {
     { name: 'React', icon: Atom, color: 'bg-cyan-100 text-cyan-600' },
     { name: 'Bootstrap', icon: Layers, color: 'bg-purple-100 text-purple-600' },
     { name: 'Tailwind CSS', icon: Wind, color: 'bg-teal-100 text-teal-600' },
+    { name: 'TypeScript', icon: Code, color: 'bg-blue-100 text-blue-600' },
+    { name: 'MongoDB', icon: Database, color: 'bg-green-100 text-green-600' },
+    { name: 'API Integration', icon: null, color: 'bg-orange-100 text-orange-600' },
+    { name: 'AI Tools', icon: null, color: 'bg-purple-100 text-purple-600' },
     { name: 'Figma', icon: Figma, color: 'bg-pink-100 text-pink-600' },
     { name: 'GitHub', icon: Github, color: 'bg-gray-100 text-gray-600' },
     { name: 'MySQL', icon: Database, color: 'bg-blue-100 text-blue-600' },
@@ -63,17 +67,17 @@ const Skills = () => {
                 <span className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-medium">
                   Next.js
                 </span>
-                <span className="px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full text-sm font-medium">
-                  TypeScript
-                </span>
                 <span className="px-4 py-2 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-full text-sm font-medium">
                   Node.js
                 </span>
+                <span className="px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full text-sm font-medium">
+                  Express.js
+                </span>
                 <span className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full text-sm font-medium">
-                  WordPress
+                  PostgreSQL
                 </span>
                 <span className="px-4 py-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full text-sm font-medium">
-                  PHP
+                  REST APIs
                 </span>
               </div>
             </div>

@@ -36,12 +36,12 @@ const Hero = () => {
           
           {/* Title */}
           <h2 className="title-display mb-8">
-            Frontend Developer & UI/UX Designer
+            Full Stack Developer & UI/UX Designer
           </h2>
           
           <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
-            Bringing ideas to life with code and creativity. I combine technical skills 
-            with design intuition to create beautiful, functional web experiences.
+            Crafting robust web applications with clean code and modern technologies. 
+            I build scalable solutions while maintaining intuitive user experiences and elegant design.
           </p>
           
           <div className="flex gap-4">

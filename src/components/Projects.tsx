@@ -24,7 +24,7 @@ const Projects = () => {
       description: 'Mental wellness platform with AI chatbot integration',
       fullDescription: 'A comprehensive mental wellness platform featuring an AI-powered chatbot built with Dialogflow. The platform provides resources, mood tracking, and personalized recommendations for mental health support.',
       image: 'https://i.postimg.cc/0jK0Vg2n/Screenshot-2025-06-21-231919.png',
-      tools: ['React', 'Dialogflow', 'Bootstrap', 'API Integration'],
+      tools: ['Dialogflow', 'Bootstrap', 'API Integration', 'JavaScript'],
       challenges: 'Integrating Dialogflow API and creating empathetic user interactions',
       learnings: 'AI chatbot development and user experience for sensitive topics',
       github: 'https://github.com/diya-turamandi/heal-minds',
