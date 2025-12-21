@@ -8,6 +8,30 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: 'Heal Minds',
+      description: 'AI-powered mental wellness platform',
+      fullDescription: 'Heal Minds is an AI-powered mental wellness platform designed to support emotional awareness and self-care. Using intelligent technology, it helps users understand their emotions, reflect mindfully, and take positive steps toward better mental well-being.',
+      image: 'https://i.postimg.cc/0jK0Vg2n/Screenshot-2025-06-21-231919.png',
+      tools: ['TensorFlow', 'OpenCV', 'Pillow (PIL)', 'Pre-trained CNN model', 'NumPy', 'Python', 'Flask'],
+      challenges: 'Accuracy of the model and creating empathetic user interactions',
+      learnings: 'AI chatbot development and user experience for sensitive topics',
+      github: 'https://github.com/diya-turamandi/heal_minds_proj',
+      live: '#'
+    },
+    {
+      id: 2,
+      title: 'React Personal Planner',
+      description: 'Personal productivity tool built using React',
+      fullDescription: 'This planner is a personal productivity tool built using React to help me organize my day, manage priorities, and maintain balance. It reflects my routine, goals, and the way I choose to work and grow.',
+      image: 'https://i.postimg.cc/4yjhymGb/Screenshot-2025-06-21-231749.png',
+      tools: ['JavaScript (ES6+)', 'HTML5', 'CSS3', 'npm', 'React.js', 'Git & GitHub'],
+      challenges: 'Debugging issues related to re-renders, props, and state updates',
+      learnings: 'How to build a real-world application using React',
+      github: 'https://github.com/diya-turamandi/planner',
+      live: '#'
+    },
+    {
+      id: 3,
       title: 'Poodup',
       description: 'A lively web app with playful animations',
       fullDescription: 'Poodup is a vibrant web application that showcases modern UI/UX principles with engaging animations and interactive elements. Built with React and styled with custom CSS animations to create a delightful user experience.',
@@ -19,19 +43,7 @@ const Projects = () => {
       live: '#'
     },
     {
-      id: 2,
-      title: 'Heal Minds',
-      description: 'Mental wellness platform with AI chatbot integration',
-      fullDescription: 'A comprehensive mental wellness platform featuring an AI-powered chatbot built with Dialogflow. The platform provides resources, mood tracking, and personalized recommendations for mental health support.',
-      image: 'https://i.postimg.cc/0jK0Vg2n/Screenshot-2025-06-21-231919.png',
-      tools: ['Dialogflow', 'Bootstrap', 'API Integration', 'JavaScript'],
-      challenges: 'Integrating Dialogflow API and creating empathetic user interactions',
-      learnings: 'AI chatbot development and user experience for sensitive topics',
-      github: 'https://github.com/diya-turamandi/heal-minds',
-      live: '#'
-    },
-    {
-      id: 3,
+      id: 4,
       title: 'Geeky Nerdy Pyaar',
       description: 'A love compatibility app with beautiful, playful design',
       fullDescription: 'A playful love compatibility application that combines fun animations with engaging design elements. Users can input their information and receive compatibility scores through an entertaining and visually appealing interface.',
@@ -43,7 +55,7 @@ const Projects = () => {
       live: 'https://geekynerdypyaar.onrender.com'
     },
     {
-      id: 4,
+      id: 5,
       title: 'Dora Fly',
       description: 'A fun browser game where players choose a character and dodge obstacles',
       fullDescription: 'Dora Fly is an engaging browser-based game built with vanilla JavaScript. Players control a character that flies through obstacles, featuring smooth gameplay mechanics and progressive difficulty levels.',
@@ -55,7 +67,7 @@ const Projects = () => {
       live: '#'
     },
     {
-      id: 5,
+      id: 6,
       title: 'ATM Pharma',
       description: 'ATM Pharma Web Page',
       fullDescription: 'A clean, user-friendly website designed for ATM Pharma — a trusted pharmacy established in 2005. The site showcases their services, has a Google Maps API integration, promotes online accessibility, and delivers an easy browsing experience for customers seeking quality healthcare products. I have made the website using React app.',
