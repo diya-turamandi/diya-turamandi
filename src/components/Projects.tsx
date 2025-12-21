@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { ArrowRight, Github } from 'lucide-react';
+import plannerImage from '@/assets/planner-project.png';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -23,7 +24,7 @@ const Projects = () => {
       title: 'React Personal Planner',
       description: 'Personal productivity tool built using React',
       fullDescription: 'This planner is a personal productivity tool built using React to help me organize my day, manage priorities, and maintain balance. It reflects my routine, goals, and the way I choose to work and grow.',
-      image: 'https://i.postimg.cc/4yjhymGb/Screenshot-2025-06-21-231749.png',
+      image: plannerImage,
       tools: ['JavaScript (ES6+)', 'HTML5', 'CSS3', 'npm', 'React.js', 'Git & GitHub'],
       challenges: 'Debugging issues related to re-renders, props, and state updates',
       learnings: 'How to build a real-world application using React',
