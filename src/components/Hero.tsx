@@ -12,7 +12,7 @@ const Hero = () => {
           {/* Name and Photo Row */}
           <div className="flex items-center gap-8 mb-8 flex-wrap justify-center">
             <div>
-              <h1 className="name-display">
+              <h1 className="name-display font-space-grotesk">
                 DIYA<br />
                 TURAMANDI
               </h1>
@@ -28,17 +28,17 @@ const Hero = () => {
               </div>
               
               {/* Floating elements */}
-              <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl shadow-lg animate-float" style={{ animationDelay: '0.5s' }}></div>
-              <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-xl shadow-lg animate-float" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-[#d4af37] to-[#b8962e] rounded-2xl shadow-lg animate-float" style={{ animationDelay: '0.5s' }}></div>
+              <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-br from-[#64b5f6] to-[#38bdf8] rounded-xl shadow-lg animate-float" style={{ animationDelay: '1s' }}></div>
             </div>
           </div>
           
           {/* Title */}
-          <h2 className="title-display mb-8">
+          <h2 className="title-display mb-8 font-space-grotesk">
             Frontend Developer — Web Developer
           </h2>
           
-          <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
+          <p className="text-lg text-slate-400 mb-8 max-w-lg leading-relaxed">
             Passionate about building responsive, user-friendly web applications with clean code and modern technologies. 
             Currently pursuing B.E. in Information Science at KLS Gogte Institute of Technology, Belagavi.
           </p>
@@ -64,10 +64,10 @@ const Hero = () => {
         {/* Educational Info */}
         <div className="mt-16 text-center">
           <div className="glass-card rounded-3xl p-6 max-w-md mx-auto hover-lift">
-            <p className="text-slate-600">
-              <span className="font-semibold gradient-text">BE Information Science</span><br />
+            <p className="text-slate-400">
+              <span className="font-semibold gradient-text font-space-grotesk">BE Information Science</span><br />
               KLS Gogte Institute of Technology, Belagavi<br />
-              <span className="text-purple-600 font-medium">Class of 2027</span>
+              <span className="text-[#d4af37] font-medium">Class of 2027</span>
             </p>
           </div>
         </div>

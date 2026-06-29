@@ -1,47 +1,47 @@
-import { Code, Globe, Server, Wrench, Palette, Atom, Layers, Wind, Database, Github, Figma } from 'lucide-react';
+import { Code, Globe, Server, Wrench, Palette } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
       title: 'Programming Languages',
       icon: Code,
-      color: 'bg-orange-100 text-orange-600',
+      color: 'bg-[#d4af37]/10 text-[#d4af37]',
       skills: ['Python (Advanced)', 'C', 'C++', 'Java']
     },
     {
       title: 'Web Technologies',
       icon: Globe,
-      color: 'bg-blue-100 text-blue-600',
+      color: 'bg-[#64b5f6]/10 text-[#64b5f6]',
       skills: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Bootstrap', 'Tailwind CSS']
     },
     {
       title: 'Backend Technologies',
       icon: Server,
-      color: 'bg-green-100 text-green-600',
+      color: 'bg-[#4ade80]/10 text-[#4ade80]',
       skills: ['Node.js', 'MySQL', 'MongoDB', 'REST APIs', 'Flask']
     },
     {
       title: 'Tools & Cloud',
       icon: Wrench,
-      color: 'bg-purple-100 text-purple-600',
+      color: 'bg-[#a78bfa]/10 text-[#a78bfa]',
       skills: ['Git', 'GitHub', 'UI Path', 'Docker', 'Salesforce', 'Tinkercad']
     },
     {
       title: 'Design & UI/UX',
       icon: Palette,
-      color: 'bg-pink-100 text-pink-600',
+      color: 'bg-[#f472b6]/10 text-[#f472b6]',
       skills: ['Figma', 'WordPress', 'Canva', 'Design Thinking', 'UI/UX Design']
     }
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white/30">
+    <section id="skills" className="py-20 bg-[#0d1b3a]/30">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text font-space-grotesk">
             Skills & Technologies
           </h2>
-          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
             A diverse toolkit spanning programming, web development, backend systems, and design
           </p>
           
@@ -56,7 +56,7 @@ const Skills = () => {
                   <category.icon className="w-6 h-6" />
                 </div>
                 
-                <h3 className="text-lg font-semibold mb-3 text-slate-800">
+                <h3 className="text-lg font-semibold mb-3 text-slate-200 font-space-grotesk">
                   {category.title}
                 </h3>
                 
@@ -64,7 +64,7 @@ const Skills = () => {
                   {category.skills.map((skill) => (
                     <span 
                       key={skill}
-                      className="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"
+                      className="px-3 py-1.5 bg-[#1e3a5f]/50 text-slate-300 rounded-full text-sm font-medium"
                     >
                       {skill}
                     </span>
