@@ -10,7 +10,7 @@ const Projects = () => {
       id: 1,
       title: 'Heal Minds',
       description: 'AI-Powered Mental Wellness Platform',
-      fullDescription: 'Developed a virtual mental wellness platform offering online consultations and self-care support. Integrated an AI-based mood detector and chatbot for emotional analysis and guidance.',
+      fullDescription: 'Heal Minds is an AI-powered mental wellness platform designed to support emotional awareness and self-care. Using intelligent technology, it helps users understand their emotions, reflect mindfully, and take positive steps toward better mental well-being.',
       image: 'https://i.postimg.cc/0jK0Vg2n/Screenshot-2025-06-21-231919.png',
       tools: ['TensorFlow', 'OpenCV', 'Pillow (PIL)', 'Pre-trained CNN model', 'NumPy', 'Python', 'Flask'],
       challenges: 'Accuracy of the model and creating empathetic user interactions',
@@ -109,10 +109,10 @@ const Projects = () => {
     <section id="projects" className="py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text font-space-grotesk">
             Featured Projects
           </h2>
-          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
             A showcase of my recent work in web development, AI, IoT, and game development
           </p>
           
@@ -134,29 +134,29 @@ const Projects = () => {
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-slate-800 group-hover:text-purple-600 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold mb-3 text-slate-200 group-hover:text-[#d4af37] transition-colors duration-300 font-space-grotesk">
                     {project.title}
                   </h3>
                   
-                  <p className="text-slate-600 mb-4 leading-relaxed">
+                  <p className="text-slate-400 mb-4 leading-relaxed">
                     {project.description}
                   </p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tools.slice(0, 3).map((tool) => (
-                      <span key={tool} className="px-3 py-1 bg-pastel-lavender text-purple-700 rounded-full text-sm font-medium">
+                      <span key={tool} className="px-3 py-1 bg-[#1e3a5f]/60 text-[#ccd6f6] rounded-full text-sm font-medium">
                         {tool}
                       </span>
                     ))}
                     {project.tools.length > 3 && (
-                      <span className="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm">
+                      <span className="px-3 py-1 bg-[#1e3a5f]/50 text-slate-400 rounded-full text-sm">
                         +{project.tools.length - 3} more
                       </span>
                     )}
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-purple-600 font-medium flex items-center gap-2 group-hover:gap-3 transition-all duration-300">
+                    <span className="text-[#d4af37] font-medium flex items-center gap-2 group-hover:gap-3 transition-all duration-300">
                       View Details <ArrowRight className="w-4 h-4" />
                     </span>
                     
@@ -166,7 +166,7 @@ const Projects = () => {
                           href={project.live} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-slate-400 hover:text-purple-600 transition-colors duration-300"
+                          className="text-slate-500 hover:text-[#d4af37] transition-colors duration-300"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <ArrowRight className="w-5 h-5" />
@@ -176,7 +176,7 @@ const Projects = () => {
                         href={project.github} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-slate-400 hover:text-purple-600 transition-colors duration-300"
+                        className="text-slate-500 hover:text-[#d4af37] transition-colors duration-300"
                         onClick={(e) => e.stopPropagation()}
                       >
                         <Github className="w-5 h-5" />
@@ -217,27 +217,27 @@ const Projects = () => {
               )}
               <button 
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-slate-600 hover:bg-white transition-colors duration-300"
+                className="absolute top-4 right-4 w-8 h-8 bg-[#112240]/80 rounded-full flex items-center justify-center text-slate-300 hover:bg-[#1e3a5f] transition-colors duration-300"
               >
                 ×
               </button>
             </div>
             
             <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4 gradient-text">
+              <h3 className="text-2xl font-bold mb-4 gradient-text font-space-grotesk">
                 {selectedProject.title}
               </h3>
               
-              <p className="text-slate-600 leading-relaxed mb-6">
+              <p className="text-slate-400 leading-relaxed mb-6">
                 {selectedProject.fullDescription}
               </p>
               
               <div className="space-y-4 mb-6">
                 <div>
-                  <h4 className="font-semibold text-purple-700 mb-2">🛠️ Tools Used</h4>
+                  <h4 className="font-semibold text-[#d4af37] mb-2 font-space-grotesk">Tools Used</h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.tools.map((tool) => (
-                      <span key={tool} className="px-3 py-1 bg-pastel-lavender text-purple-700 rounded-full text-sm font-medium">
+                      <span key={tool} className="px-3 py-1 bg-[#1e3a5f]/60 text-[#ccd6f6] rounded-full text-sm font-medium">
                         {tool}
                       </span>
                     ))}
@@ -245,13 +245,13 @@ const Projects = () => {
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-purple-700 mb-2">💪 Challenges</h4>
-                  <p className="text-slate-600">{selectedProject.challenges}</p>
+                  <h4 className="font-semibold text-[#d4af37] mb-2 font-space-grotesk">Challenges</h4>
+                  <p className="text-slate-400">{selectedProject.challenges}</p>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-purple-700 mb-2">📚 What I Learned</h4>
-                  <p className="text-slate-600">{selectedProject.learnings}</p>
+                  <h4 className="font-semibold text-[#d4af37] mb-2 font-space-grotesk">What I Learned</h4>
+                  <p className="text-slate-400">{selectedProject.learnings}</p>
                 </div>
               </div>
               

@@ -37,7 +37,7 @@ const Contact = () => {
       );
 
       toast({
-        title: "Message Sent! 🎉",
+        title: "Message Sent!",
         description: "Thanks for reaching out! I'll get back to you soon.",
       });
       
@@ -66,19 +66,19 @@ const Contact = () => {
       name: 'Instagram',
       icon: Instagram,
       url: 'https://instagram.com/diya_turamandi',
-      color: 'hover:text-pink-600'
+      color: 'hover:text-[#d4af37]'
     },
     {
       name: 'GitHub',
       icon: Github,
       url: 'https://github.com/diya-turamandi',
-      color: 'hover:text-slate-800'
+      color: 'hover:text-[#e6f1ff]'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
       url: 'https://linkedin.com/in/diya-turamandi-007875263',
-      color: 'hover:text-blue-600'
+      color: 'hover:text-[#64b5f6]'
     }
   ];
 
@@ -86,23 +86,23 @@ const Contact = () => {
     <section id="contact" className="py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text font-space-grotesk">
             Let's Work Together
           </h2>
-          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
             Have a project in mind? I'd love to hear about it! Let's create something amazing together.
           </p>
           
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="glass-card rounded-3xl p-8">
-              <h3 className="text-xl font-semibold mb-6 text-purple-700">
-                Send me a message 📧
+              <h3 className="text-xl font-semibold mb-6 text-[#d4af37] font-space-grotesk">
+                Send me a message
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-slate-700 font-medium mb-2">
+                  <label htmlFor="name" className="block text-slate-300 font-medium mb-2">
                     Your Name
                   </label>
                   <input
@@ -113,13 +113,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     disabled={isLoading}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all duration-300 disabled:opacity-50"
+                    className="w-full px-4 py-3 rounded-xl border border-[#1e3a5f] bg-[#0a192f]/50 text-slate-200 focus:border-[#d4af37] focus:ring-2 focus:ring-[#d4af37]/20 outline-none transition-all duration-300 disabled:opacity-50"
                     placeholder="John Doe"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-slate-700 font-medium mb-2">
+                  <label htmlFor="email" className="block text-slate-300 font-medium mb-2">
                     Email Address
                   </label>
                   <input
@@ -130,13 +130,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     disabled={isLoading}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all duration-300 disabled:opacity-50"
+                    className="w-full px-4 py-3 rounded-xl border border-[#1e3a5f] bg-[#0a192f]/50 text-slate-200 focus:border-[#d4af37] focus:ring-2 focus:ring-[#d4af37]/20 outline-none transition-all duration-300 disabled:opacity-50"
                     placeholder="john@example.com"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-slate-700 font-medium mb-2">
+                  <label htmlFor="message" className="block text-slate-300 font-medium mb-2">
                     Message
                   </label>
                   <textarea
@@ -147,7 +147,7 @@ const Contact = () => {
                     required
                     disabled={isLoading}
                     rows={5}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all duration-300 resize-none disabled:opacity-50"
+                    className="w-full px-4 py-3 rounded-xl border border-[#1e3a5f] bg-[#0a192f]/50 text-slate-200 focus:border-[#d4af37] focus:ring-2 focus:ring-[#d4af37]/20 outline-none transition-all duration-300 resize-none disabled:opacity-50"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -157,7 +157,7 @@ const Contact = () => {
                   disabled={isLoading}
                   className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isLoading ? 'Sending...' : 'Send Message ✨'}
+                  {isLoading ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
@@ -165,30 +165,30 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="glass-card rounded-3xl p-8">
-                <h3 className="text-xl font-semibold mb-6 text-purple-700">
-                  Get in touch 📱
+                <h3 className="text-xl font-semibold mb-6 text-[#d4af37] font-space-grotesk">
+                  Get in touch
                 </h3>
                 
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                      <span className="text-white text-xl">📧</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#d4af37] to-[#b8962e] rounded-xl flex items-center justify-center">
+                      <span className="text-[#0a192f] text-xl font-bold">@</span>
                     </div>
                     <div>
-                      <p className="font-medium text-slate-700">Email</p>
-                      <a href="mailto:diyaturamandi@gmail.com" className="text-purple-600 hover:text-purple-700 transition-colors duration-300">
+                      <p className="font-medium text-slate-300">Email</p>
+                      <a href="mailto:diyaturamandi@gmail.com" className="text-[#d4af37] hover:text-[#e8d5a3] transition-colors duration-300">
                         diyaturamandi@gmail.com
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                      <span className="text-white text-xl">📱</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#d4af37] to-[#b8962e] rounded-xl flex items-center justify-center">
+                      <span className="text-[#0a192f] text-xl font-bold">#</span>
                     </div>
                     <div>
-                      <p className="font-medium text-slate-700">Phone</p>
-                      <a href="tel:+91-8618657239" className="text-purple-600 hover:text-purple-700 transition-colors duration-300">
+                      <p className="font-medium text-slate-300">Phone</p>
+                      <a href="tel:+91-8618657239" className="text-[#d4af37] hover:text-[#e8d5a3] transition-colors duration-300">
                         +91-8618657239
                       </a>
                     </div>
@@ -197,8 +197,8 @@ const Contact = () => {
               </div>
               
               <div className="glass-card rounded-3xl p-8">
-                <h3 className="text-xl font-semibold mb-6 text-purple-700">
-                  Follow me online 🌐
+                <h3 className="text-xl font-semibold mb-6 text-[#d4af37] font-space-grotesk">
+                  Follow me online
                 </h3>
                 
                 <div className="flex gap-4">
@@ -208,23 +208,23 @@ const Contact = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-12 h-12 bg-white/50 rounded-xl flex items-center justify-center text-slate-600 ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-lg`}
+                      className={`w-12 h-12 bg-[#112240]/50 rounded-xl flex items-center justify-center text-slate-400 ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-lg`}
                     >
                       <social.icon className="w-6 h-6" />
                     </a>
                   ))}
                 </div>
                 
-                <p className="text-slate-600 mt-4 text-sm">
+                <p className="text-slate-400 mt-4 text-sm">
                   Connect with me on social media to see my latest work and thoughts on design & development!
                 </p>
               </div>
               
               <div className="glass-card rounded-3xl p-8">
-                <h3 className="text-xl font-semibold mb-4 text-purple-700">
-                  Currently Available 🎯
+                <h3 className="text-xl font-semibold mb-4 text-[#d4af37] font-space-grotesk">
+                  Currently Available
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-slate-400">
                   I'm open to new opportunities and exciting projects. 
                   Let's discuss how we can work together to create something amazing!
                 </p>
