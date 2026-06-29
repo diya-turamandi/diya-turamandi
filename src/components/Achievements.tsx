@@ -6,36 +6,36 @@ const Achievements = () => {
       icon: Award,
       title: 'Web Coordinator — ACM Student Chapter',
       description: 'Served as the Web Coordinator, managing and maintaining the club\'s web presence. Actively contributed to organizing hackathons, coding contests, technical workshops, and student engagement events while collaborating with the core team to ensure successful execution.',
-      color: 'bg-purple-100 text-purple-600'
+      color: 'bg-[#d4af37]/10 text-[#d4af37]'
     },
     {
       icon: Users,
       title: 'Board Member — The Change Makers Society (CMS)',
       description: 'Actively contributed to planning and organizing social impact initiatives, awareness campaigns, and community events. Collaborated with team members to successfully execute various student engagement activities.',
-      color: 'bg-pink-100 text-pink-600'
+      color: 'bg-[#f472b6]/10 text-[#f472b6]'
     },
     {
       icon: Trophy,
       title: 'Runner-up — Treasure Hunt at Aura 2025',
       description: 'Secured runner-up position in the Treasure Hunt competition at Aura 2025, demonstrating teamwork, problem-solving skills, and competitive spirit.',
-      color: 'bg-yellow-100 text-yellow-600'
+      color: 'bg-[#facc15]/10 text-[#facc15]'
     },
     {
       icon: Trophy,
       title: '2nd Place — Laser Maze Competition',
       description: 'Achieved 2nd place in the Laser Maze competition, showcasing strategic thinking, agility, and precision under pressure.',
-      color: 'bg-orange-100 text-orange-600'
+      color: 'bg-[#fb923c]/10 text-[#fb923c]'
     }
   ];
 
   return (
-    <section id="achievements" className="py-20">
+    <section id="achievements" className="py-20 bg-[#0d1b3a]/30">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text font-space-grotesk">
             Certifications & Achievements
           </h2>
-          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
             Leadership roles, community involvement, and competitive achievements
           </p>
           
@@ -52,10 +52,10 @@ const Achievements = () => {
                   </div>
                   
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-800 mb-2">
+                    <h3 className="text-lg font-semibold text-slate-200 mb-2 font-space-grotesk">
                       {item.title}
                     </h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">
+                    <p className="text-slate-400 text-sm leading-relaxed">
                       {item.description}
                     </p>
                   </div>
