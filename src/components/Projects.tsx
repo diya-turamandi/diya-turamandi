@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ArrowRight, Github } from 'lucide-react';
 import plannerImage from '@/assets/planner-project.png';
@@ -10,8 +9,8 @@ const Projects = () => {
     {
       id: 1,
       title: 'Heal Minds',
-      description: 'AI-powered mental wellness platform',
-      fullDescription: 'Heal Minds is an AI-powered mental wellness platform designed to support emotional awareness and self-care. Using intelligent technology, it helps users understand their emotions, reflect mindfully, and take positive steps toward better mental well-being.',
+      description: 'AI-Powered Mental Wellness Platform',
+      fullDescription: 'Developed a virtual mental wellness platform offering online consultations and self-care support. Integrated an AI-based mood detector and chatbot for emotional analysis and guidance.',
       image: 'https://i.postimg.cc/0jK0Vg2n/Screenshot-2025-06-21-231919.png',
       tools: ['TensorFlow', 'OpenCV', 'Pillow (PIL)', 'Pre-trained CNN model', 'NumPy', 'Python', 'Flask'],
       challenges: 'Accuracy of the model and creating empathetic user interactions',
@@ -21,6 +20,43 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: 'ATM Pharma',
+      description: 'Pharmaceutical Website',
+      fullDescription: 'Built a responsive pharmaceutical website using React.js to showcase products and services. Integrated APIs for dynamic content handling and ensured optimization across multiple devices and screen sizes.',
+      image: 'https://i.postimg.cc/fbdJnPgT/Screenshot-2025-06-22-121344.png',
+      secondaryImage: 'https://i.postimg.cc/yNRXQvm0/Screenshot-2025-06-22-121316.png',
+      tools: ['React', 'HTML', 'CSS', 'JavaScript', 'Google Maps API'],
+      challenges: 'Integrating Google Maps API and creating a professional healthcare website',
+      learnings: 'API integration, healthcare industry web standards, and user-friendly design',
+      github: 'https://github.com/diya-turamandi/AtmPharmaProject/tree/main/AtmPharma',
+      live: '#'
+    },
+    {
+      id: 3,
+      title: 'Smart Parking Slot Booking System',
+      description: 'Salesforce & Tinkercad IoT Project',
+      fullDescription: 'Developed a smart parking management system using Salesforce and Tinkercad to automate parking slot booking, payment tracking, and slot monitoring. Designed custom objects, reports, and dashboards in Salesforce while simulating IR sensors, Arduino, LEDs, and servo motors in Tinkercad for real-time vehicle detection and gate control. Improved parking efficiency through digital workflows and real-time analytics.',
+      image: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=600&h=400&fit=crop',
+      tools: ['Salesforce', 'Tinkercad', 'Arduino', 'IoT Sensors', 'Dashboard Design'],
+      challenges: 'Integrating hardware simulation with Salesforce dashboards and real-time data flow',
+      learnings: 'IoT development, Salesforce customization, and real-time analytics integration',
+      github: '#',
+      live: '#'
+    },
+    {
+      id: 4,
+      title: 'Space Invaders',
+      description: 'Python Game',
+      fullDescription: 'Implemented game mechanics including player movement, enemy spawning, shooting, and collision detection using Python and Pygame. Designed interactive gameplay with score tracking and increasing difficulty levels. Focused on smooth animations, responsive controls, graphics rendering, and engaging real-time user experience.',
+      image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop',
+      tools: ['Python', 'Pygame', 'Game Logic', 'Graphics Rendering'],
+      challenges: 'Implementing smooth collision detection and progressive difficulty scaling',
+      learnings: 'Game development fundamentals, real-time rendering, and interactive UI design',
+      github: '#',
+      live: '#'
+    },
+    {
+      id: 5,
       title: 'React Personal Planner',
       description: 'Personal productivity tool built using React',
       fullDescription: 'This planner is a personal productivity tool built using React to help me organize my day, manage priorities, and maintain balance. It reflects my routine, goals, and the way I choose to work and grow.',
@@ -32,7 +68,7 @@ const Projects = () => {
       live: '#'
     },
     {
-      id: 3,
+      id: 6,
       title: 'Poodup',
       description: 'A lively web app with playful animations',
       fullDescription: 'Poodup is a vibrant web application that showcases modern UI/UX principles with engaging animations and interactive elements. Built with React and styled with custom CSS animations to create a delightful user experience.',
@@ -44,7 +80,7 @@ const Projects = () => {
       live: '#'
     },
     {
-      id: 4,
+      id: 7,
       title: 'Geeky Nerdy Pyaar',
       description: 'A love compatibility app with beautiful, playful design',
       fullDescription: 'A playful love compatibility application that combines fun animations with engaging design elements. Users can input their information and receive compatibility scores through an entertaining and visually appealing interface.',
@@ -56,7 +92,7 @@ const Projects = () => {
       live: 'https://geekynerdypyaar.onrender.com'
     },
     {
-      id: 5,
+      id: 8,
       title: 'Dora Fly',
       description: 'A fun browser game where players choose a character and dodge obstacles',
       fullDescription: 'Dora Fly is an engaging browser-based game built with vanilla JavaScript. Players control a character that flies through obstacles, featuring smooth gameplay mechanics and progressive difficulty levels.',
@@ -65,19 +101,6 @@ const Projects = () => {
       challenges: 'Implementing smooth game physics and collision detection',
       learnings: 'Game development fundamentals and canvas manipulation',
       github: 'https://github.com/diya-turamandi/dora-fly',
-      live: '#'
-    },
-    {
-      id: 6,
-      title: 'ATM Pharma',
-      description: 'ATM Pharma Web Page',
-      fullDescription: 'A clean, user-friendly website designed for ATM Pharma — a trusted pharmacy established in 2005. The site showcases their services, has a Google Maps API integration, promotes online accessibility, and delivers an easy browsing experience for customers seeking quality healthcare products. I have made the website using React app.',
-      image: 'https://i.postimg.cc/fbdJnPgT/Screenshot-2025-06-22-121344.png',
-      secondaryImage: 'https://i.postimg.cc/yNRXQvm0/Screenshot-2025-06-22-121316.png',
-      tools: ['React', 'HTML', 'CSS', 'JavaScript', 'Google Maps API'],
-      challenges: 'Integrating Google Maps API and creating a professional healthcare website',
-      learnings: 'API integration, healthcare industry web standards, and user-friendly design',
-      github: 'https://github.com/diya-turamandi/AtmPharmaProject/tree/main/AtmPharma',
       live: '#'
     }
   ];
@@ -90,7 +113,7 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
-            A showcase of my recent work in web development and UI/UX design
+            A showcase of my recent work in web development, AI, IoT, and game development
           </p>
           
           <div className="grid md:grid-cols-2 gap-8">
