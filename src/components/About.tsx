@@ -15,25 +15,27 @@ const About = () => {
               </h3>
               
               <p className="text-slate-600 leading-relaxed mb-6">
-                I'm an engineering student from KLS GIT with a creative soul for frontend design. 
-                I bring vibrant UIs to life using modern tools and a strong design sense.
+                I'm an engineering student at KLS GIT, Belagavi, with a strong passion for 
+                frontend development and web technologies. I build responsive, user-friendly 
+                web applications using React.js and modern tools, combining technical expertise 
+                with design thinking to create impactful digital experiences.
               </p>
               
               <p className="text-slate-600 leading-relaxed mb-6">
-                My passion lies in creating digital experiences that are not just functional, 
-                but delightful to use. I believe in the power of good design to solve problems 
-                and bring joy to users.
+                With hands-on experience in e-commerce development, AI-powered platforms, 
+                and game development, I bring a versatile skill set to every project. 
+                I thrive on turning complex problems into elegant, efficient solutions.
               </p>
               
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 bg-pastel-lavender text-purple-700 rounded-full text-sm font-medium">
-                  Creative Problem Solver
+                  Problem Solver
                 </span>
                 <span className="px-4 py-2 bg-pastel-mint text-green-700 rounded-full text-sm font-medium">
                   Detail Oriented
                 </span>
                 <span className="px-4 py-2 bg-pastel-pink text-pink-700 rounded-full text-sm font-medium">
-                  User Focused
+                  Team Player
                 </span>
               </div>
             </div>
@@ -42,25 +44,34 @@ const About = () => {
               <div className="glass-card rounded-2xl p-6 hover-lift">
                 <h4 className="font-semibold text-purple-700 mb-2">🎓 Education</h4>
                 <p className="text-slate-600">
-                  Bachelor of Engineering in Information Science<br />
-                  <span className="font-medium">KLS Gogte Institute of Technology, Belagavi</span><br />
-                  Expected Graduation: 2027
+                  <span className="font-medium">Bachelor of Engineering (B.E.) in Information Science</span><br />
+                  KLS Gogte Institute of Technology, Belagavi<br />
+                  <span className="text-purple-600 font-medium">CGPA: 7 | 2023 — 2027</span>
                 </p>
               </div>
               
               <div className="glass-card rounded-2xl p-6 hover-lift">
-                <h4 className="font-semibold text-purple-700 mb-2">💡 Philosophy</h4>
+                <h4 className="font-semibold text-purple-700 mb-2">📚 Pre-University</h4>
                 <p className="text-slate-600">
-                  "Design is not just what it looks like and feels like. 
-                  Design is how it works." - I strive to create beautiful, 
-                  functional experiences that users love.
+                  <span className="font-medium">PUC — KLE Independent PU College</span><br />
+                  Belagavi<br />
+                  <span className="text-purple-600 font-medium">Percentage: 85% | 2021 — 2023</span>
+                </p>
+              </div>
+              
+              <div className="glass-card rounded-2xl p-6 hover-lift">
+                <h4 className="font-semibold text-purple-700 mb-2">🏫 SSLC</h4>
+                <p className="text-slate-600">
+                  <span className="font-medium">St. Xavier's High School</span><br />
+                  Belagavi<br />
+                  <span className="text-purple-600 font-medium">Percentage: 92% | 2009 — 2021</span>
                 </p>
               </div>
               
               <div className="glass-card rounded-2xl p-6 hover-lift">
                 <h4 className="font-semibold text-purple-700 mb-2">🚀 Goals</h4>
                 <p className="text-slate-600">
-                  To combine technical skills with creative vision to build 
+                  To leverage my technical skills and creative vision to build 
                   the next generation of web applications that make a difference.
                 </p>
               </div>

@@ -1,4 +1,3 @@
-
 import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
@@ -36,12 +35,12 @@ const Hero = () => {
           
           {/* Title */}
           <h2 className="title-display mb-8">
-            Full Stack Developer & UI/UX Designer
+            Frontend Developer — Web Developer
           </h2>
           
           <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
-            Crafting robust web applications with clean code and modern technologies. 
-            I build scalable solutions while maintaining intuitive user experiences and elegant design.
+            Passionate about building responsive, user-friendly web applications with clean code and modern technologies. 
+            Currently pursuing B.E. in Information Science at KLS Gogte Institute of Technology, Belagavi.
           </p>
           
           <div className="flex gap-4">
@@ -67,7 +66,7 @@ const Hero = () => {
           <div className="glass-card rounded-3xl p-6 max-w-md mx-auto hover-lift">
             <p className="text-slate-600">
               <span className="font-semibold gradient-text">BE Information Science</span><br />
-              KLS Gogte Institute of Technology<br />
+              KLS Gogte Institute of Technology, Belagavi<br />
               <span className="text-purple-600 font-medium">Class of 2027</span>
             </p>
           </div>

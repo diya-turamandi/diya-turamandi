@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 
 const Header = () => {
@@ -18,29 +17,29 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-purple-900/95 backdrop-blur-xl shadow-lg' : 'bg-purple-900/80 backdrop-blur-sm'
+      isScrolled ? 'glass-card shadow-lg' : 'bg-transparent'
     }`}>
       <nav className="container mx-auto px-6 py-6">
         <div className="flex justify-between items-center">
-          <div className="text-xl font-bold text-white">
+          <div className="text-xl font-bold gradient-text">
             Diya Turamandi
           </div>
           
           <div className="hidden md:flex space-x-8">
-            {['Home', 'About', 'Skills', 'Projects', 'Services', 'Contact'].map((item) => (
+            {['Home', 'About', 'Skills', 'Experience', 'Projects', 'Achievements', 'Services', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-purple-100 hover:text-white transition-colors duration-300 font-medium relative group"
+                className="text-slate-700 hover:text-purple-600 transition-colors duration-300 font-medium relative group"
               >
                 {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-300 to-pink-300 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
           </div>
           
           <div className="md:hidden">
-            <button className="text-purple-100 hover:text-white">
+            <button className="text-slate-700 hover:text-purple-600">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
